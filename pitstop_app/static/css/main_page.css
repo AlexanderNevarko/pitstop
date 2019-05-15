@@ -1,0 +1,103 @@
+html,body{
+    margin:0;
+    height:100%;
+}
+
+html {
+    overflow: hidden;
+}
+
+.img-container {
+    background-color: #003344;
+    width:100%; height:100%;
+    position: relative;
+}
+
+.img-container img {
+    display:block;
+    width:100%; height:100%;
+    object-fit: cover;
+    -webkit-background-size: cover !important;
+    -moz-background-size: cover !important;
+    -o-background-size: cover !important;
+    background-size: cover !important;
+    opacity: 0.5;
+    filter: blur(2px);
+}
+
+.first {
+    position: absolute;
+    top: 0vh;
+    width: 100%;
+    height: 5vmax;
+    padding: 0;
+    margin: 0;
+    opacity: 0.5;
+
+}
+
+.nav {
+    position: absolute;
+    top: 1.4%;
+    left: 41.5%;
+    font-weight: 700;
+    font-size: 2.8vmax;
+    font-family: 'PT Sans', sans-serif;
+    color: white;
+}
+
+.init-parameters-header {
+    position: absolute;
+    left: 37.5%;
+    top: 15vmax;
+    color: white;
+    font-weight: 400;
+    font-size: 2.3vw;
+}
+
+.second {
+    position: absolute;
+    top: 15vmax;
+    width: 100%;
+    height: 3vw;
+    padding: 0;
+    margin: 0;
+    opacity: 0.18;
+}
+
+.data-form {
+    position: absolute;
+    width: 40%;
+    top: 23vmax;
+    left: 32.5%;
+}
+
+.input-field label {
+     color: white;
+     font-size: 1.35vw;
+   }
+
+.input-field input[type=text] {
+     border-bottom: 0px solid #8ebaff;
+     box-shadow: 0 1px 0 0 #8ebaff;
+}
+
+input:focus ~ label, input:valid ~ label {
+  top: -2.3vmax;
+  font-size: calc(5px + 1.0vw);
+  color: white;
+}
+
+input:focus {
+    color: white;
+    font-size: 1.4vw;
+}
+
+input {
+    color: white;
+}
+
+.wrapper {
+    text-align: center;
+}
+

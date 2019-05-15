@@ -1,6 +1,13 @@
 from django.db import models
 
 
+class InputData(models.Model):
+    weather = models.CharField(max_length = 30)
+    temperature = models.IntegerField()
+    car_model = models.CharField(max_length = 50)
+    driver_id = models.IntegerField()
+
+
 class Map(models.Model):
     pass
 
