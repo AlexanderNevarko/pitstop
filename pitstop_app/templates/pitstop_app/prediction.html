@@ -1,3 +1,59 @@
 <script>
     alert('Some prediction')
 </script>
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PitStop</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main_page.css' %}">
+</head>
+<body>
+    <div class="img-container">
+        <img src="{% static 'background-image.png' %}">
+        <nav class="first navbar navbar-dark bg-dark">
+        </nav>
+        <h1 class="nav">PitStop Master</h1>
+        <nav class="second navbar navbar-dark bg-dark">
+        </nav>
+        <h1 class="init-parameters-header">Enter the initial parameters:</h1>
+
+        <div class="row data-form">
+                <form class="col s12" method="POST" action="/jopa">{% csrf_token %}
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input name="weater" id="weather" type="text" class="validate" required>
+                            <label for="weather">Weather</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input name="temperature" id="temperature" type="text" class="validate" required>
+                            <label for="temperature">Temperature</label>
+                        </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input name="car-model" id="car-model" type="text" class="validate" required>
+                                <label for="car-model">Car Model</label>
+                            </div>
+                        </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input name="driver-id" id="driver-id" type="text" class="validate" required>
+                            <label for="driver-id">Driver ID</label>
+                        </div>
+                    </div>
+
+                <div class="wrapper">
+                    <button type="submit" class="btn btn-light">Pognalee</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</body>
+</html>
